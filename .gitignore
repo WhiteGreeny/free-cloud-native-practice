@@ -1,0 +1,70 @@
+### gradle ###
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### maven ###
+target/
+*.war
+*.ear
+*.zip
+*.tar
+*.tar.gz
+
+### logs ####
+/logs/
+*.log
+
+### temp ignore ###
+*.cache
+*.diff
+*.patch
+*.tmp
+*.java~
+*.properties~
+*.xml~
+
+### system ignore ###
+.DS_Store
+Thumbs.db
+Servers
+.metadata
+upload
+gen_code
+
+### node ###
+node_modules
+dist
