@@ -40,11 +40,7 @@ jobs:
           gradle-version: 8.4
       - name: Execute Gradle build
         run: gradle nativeCompile
-      - name: show build
-        run: |
-          echo build/native
-          ls build/native
-          echo build/nativeCompile
-          ls build/nativeCompile
-          echo build/libs
-          ls build/libs
+      - uses: actions/upload-artifact@v3
+        with:
+          name: free-cloud-native-practice-api ${{ matrix.os }}
+          path: build/native/nativeCompile/free-cloud-native-practice
