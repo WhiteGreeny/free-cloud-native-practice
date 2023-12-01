@@ -1,0 +1,4 @@
+white:
+  security:
+    user-map:
+      white: ${DEFAULT_PASSWORD:$2a$10$0wEsdYxYslX1WaGl.duX2.TYUqAgzjxrpiJ4bBnUioUMgwGEYzwq6}

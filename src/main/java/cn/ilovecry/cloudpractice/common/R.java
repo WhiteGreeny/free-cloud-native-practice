@@ -1,4 +1,4 @@
-package cn.ilovecry.cloudpractice.base;
+package cn.ilovecry.cloudpractice.common;
 
 /**
  * R

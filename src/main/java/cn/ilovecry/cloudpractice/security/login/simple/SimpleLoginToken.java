@@ -21,9 +21,9 @@ public class SimpleLoginToken extends AbstractAuthenticationToken {
      * @param authorities the collection of <tt>GrantedAuthority</tt>s for the principal
      *                    represented by this authentication object.
      */
-    public SimpleLoginToken(String username,String password,Collection<? extends GrantedAuthority> authorities) {
+    public SimpleLoginToken(Object principal,String password,Collection<? extends GrantedAuthority> authorities) {
         super(authorities);
-        this.principal = username;
+        this.principal = principal;
         this.credentials = password;
     }
 

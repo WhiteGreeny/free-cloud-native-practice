@@ -23,13 +23,8 @@ import java.io.IOException;
 public class LoginFilter extends AbstractAuthenticationProcessingFilter {
     private static final AntPathRequestMatcher DEFAULT_ANT_PATH_REQUEST_MATCHER = new AntPathRequestMatcher("/auth/login",
             "POST");
-
     public LoginFilter() {
         super(DEFAULT_ANT_PATH_REQUEST_MATCHER);
-    }
-
-    public LoginFilter(AuthenticationManager authenticationManager) {
-        super(DEFAULT_ANT_PATH_REQUEST_MATCHER, authenticationManager);
     }
 
     @Override

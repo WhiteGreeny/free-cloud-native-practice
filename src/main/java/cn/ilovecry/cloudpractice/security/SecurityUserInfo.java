@@ -20,6 +20,7 @@ import java.util.Collection;
 @AllArgsConstructor
 public class SecurityUserInfo implements UserDetails {
     private String username;
+    private String password;
     private String id;
 
     @Override
@@ -29,7 +30,7 @@ public class SecurityUserInfo implements UserDetails {
 
     @Override
     public String getPassword() {
-        return null;
+        return password;
     }
 
     @Override

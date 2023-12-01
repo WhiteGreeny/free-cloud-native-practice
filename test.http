@@ -1,12 +1,13 @@
 ###
 GET http://localhost:8080/demo/hello
-Accept: application/json
-
 ###
+GET http://localhost:8080/demo/getInfo
+Authorization: Bearer 2f343703-128e-43b8-a310-f564e110351c
+### simple login
 POST http://localhost:8080/auth/login
 Content-Type: application/json
 
 {
-    "username": "admin",
-    "password": "admin"
+    "username": "white",
+    "password": "50dc123be32a3e71efa61ea7d2104b6cb7b393c3"
 }

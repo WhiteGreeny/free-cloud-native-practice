@@ -1,6 +1,6 @@
 package cn.ilovecry.cloudpractice.controller;
 
-import cn.ilovecry.cloudpractice.base.R;
+import cn.ilovecry.cloudpractice.common.R;
 import cn.ilovecry.cloudpractice.security.SecurityUserInfo;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +25,7 @@ public class DemoController {
     @GetMapping("/getInfo")
     public R getInfo() {
         if (SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof SecurityUserInfo userInfo) {
+            userInfo.setPassword(null);
             return R.success(userInfo);
         }
         return R.error(R.UNAUTHORIZED_CODE, "获取用户信息失败");
