@@ -43,4 +43,4 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: free-cloud-native-practice-api ${{ matrix.os }}
-          path: build/native/nativeCompile/free-cloud-native-practice
+          path: build/native/nativeCompile/free-cloud-native-practice*
