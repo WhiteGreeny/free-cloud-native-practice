@@ -40,3 +40,8 @@ jobs:
           gradle-version: 8.4
       - name: Execute Gradle build
         run: gradle nativeCompile
+      - name: show build
+        run: |
+          ls build
+          ls build/native
+          ls build/libs
