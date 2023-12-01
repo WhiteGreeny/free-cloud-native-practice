@@ -30,7 +30,7 @@ public class SimpleLoginProvider implements AuthenticationProvider {
         String password = (String) authentication.getCredentials();
         String username = (String) authentication.getPrincipal();
         UserDetails userDetails = customUserDetailsService.loadUserByUsername(username);
-        if (!passwordEncoder.matches(password, userDetails.getPassword())) {
+        if (userDetails == null || !passwordEncoder.matches(password, userDetails.getPassword())) {
             throw new BadCredentialsException("密码错误");
         }
         SimpleLoginToken simpleLoginToken = new SimpleLoginToken(userDetails, null, userDetails.getAuthorities());
