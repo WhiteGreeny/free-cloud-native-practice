@@ -62,7 +62,7 @@ public class WebSecurityConfigure {
 
     @Bean
     public UserDetailsService customUserDetailsService(SecurityProperties securityProperties) {
-        return new CustomUserDetailsService(securityProperties);
+        return new CustomUserDetailsServiceImpl(securityProperties);
     }
 
     public LoginFilter loginFilter() {

@@ -32,7 +32,8 @@ public class SimpleLoginSuccessHandler implements AuthenticationSuccessHandler {
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
         String token = UUID.randomUUID().toString();
-        cacheService.set(token, authentication.getPrincipal(),30, TimeUnit.MINUTES);
+        cacheService.set(token, authentication.getPrincipal(), 30, TimeUnit.MINUTES);
+        response.setContentType("application/json;charset=UTF-8");
         response.getWriter().write(objectMapper.writeValueAsString(R.success(token)));
     }
 }

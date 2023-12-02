@@ -2,7 +2,6 @@ package cn.ilovecry.cloudpractice.security;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.util.StringUtils;
 
 /**
@@ -12,10 +11,10 @@ import org.springframework.util.StringUtils;
  * @version 1.0
  * @date 2023/7/10 16:15
  */
-public class CustomUserDetailsService implements UserDetailsService {
+public class CustomUserDetailsServiceImpl implements UserDetailsService {
     private final SecurityProperties securityProperties;
 
-    public CustomUserDetailsService(SecurityProperties securityProperties) {
+    public CustomUserDetailsServiceImpl(SecurityProperties securityProperties) {
         this.securityProperties = securityProperties;
     }
 
