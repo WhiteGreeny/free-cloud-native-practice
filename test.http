@@ -11,3 +11,28 @@ Content-Type: application/json
     "username": "white",
     "password": "50dc123be32a3e71efa61ea7d2104b6cb7b393c3"
 }
+###
+POST localhost:8080/auth/login
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Cache-Control: no-cache
+Connection: keep-alive
+Content-Length: 74
+Content-Type: text/plain;charset=UTF-8
+Host: localhost:5173
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0
+sec-ch-ua: "Microsoft Edge";v="119", "Chromium";v="119", "Not?A_Brand";v="24"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+
+{
+    "username": "white",
+    "password": "50dc123be32a3e71efa61ea7d2104b6cb7b393c3"
+}
