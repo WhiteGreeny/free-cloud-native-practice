@@ -46,6 +46,7 @@ jobs:
           path: build/native/nativeCompile/free-cloud-native-practice*
       - name: Build and push
         uses: docker/build-push-action@v5
+        if: matrix.os == 'ubuntu-latest'
         with:
           push: false
           tags: practice-api:latest
