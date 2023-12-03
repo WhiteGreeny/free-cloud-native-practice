@@ -44,3 +44,14 @@ jobs:
         with:
           name: free-cloud-native-practice-api ${{ matrix.os }}
           path: build/native/nativeCompile/free-cloud-native-practice*
+      - name: build docker image
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          docker build . --file Dockerfile --tag practice-api:latest
+      - uses: superfly/flyctl-actions/setup-flyctl@master
+      - name: fly deploy
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          flyctl deploy --remote-only
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
