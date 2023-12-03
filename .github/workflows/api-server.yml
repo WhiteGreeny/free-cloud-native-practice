@@ -48,7 +48,7 @@ jobs:
         uses: docker/build-push-action@v5
         if: matrix.os == 'ubuntu-latest'
         with:
-          context:
+          context: .
           push: false
           tags: practice-api:latest
       - uses: superfly/flyctl-actions/setup-flyctl@master
