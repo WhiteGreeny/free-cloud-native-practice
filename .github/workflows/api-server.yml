@@ -38,19 +38,13 @@ jobs:
         uses: gradle/gradle-build-action@v2
         with:
           gradle-version: 8.4
-#      - name: Execute Gradle build
-#        run: gradle nativeCompile
-#      - uses: actions/upload-artifact@v3
-#        with:
-#          name: free-cloud-native-practice-api ${{ matrix.os }}
-#          path: build/native/nativeCompile/free-cloud-native-practice*
-      - name: Build and push
-        uses: docker/build-push-action@v5
+      - name: Execute Gradle build
+        run: gradle nativeCompile
+      - name: build docker image
         if: matrix.os == 'ubuntu-latest'
-        with:
-          context: .
-          push: false
-          tags: practice-api:latest
+        run: |
+          cp build/native/nativeCompile/free-cloud-native-practice deploy/artifacts
+          docker build . --file Dockerfile --tag practice-api:latest
       - uses: superfly/flyctl-actions/setup-flyctl@master
       - name: fly deploy
         if: matrix.os == 'ubuntu-latest'
